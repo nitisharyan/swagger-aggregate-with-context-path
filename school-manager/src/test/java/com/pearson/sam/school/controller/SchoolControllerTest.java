@@ -41,7 +41,7 @@ public class SchoolControllerTest {
 	
 	@Test
 	public void getHealthStatus() throws Exception {
-		mockMvc.perform(get("/v1").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
+		mockMvc.perform(get("/api").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
 				.andReturn();
 	}
 
@@ -50,7 +50,7 @@ public class SchoolControllerTest {
 
 		Mockito.when(schoolServiceMock.getSchool(Mockito.anyString())).thenReturn(new SchoolResponse());
 
-		mockMvc.perform(get("/v1/1111111111111").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
+		mockMvc.perform(get("/api/1111111111111").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
 				.andReturn();
 	}
 
@@ -59,7 +59,7 @@ public class SchoolControllerTest {
 
 		Mockito.when(schoolServiceMock.createSchool(Mockito.any(School.class))).thenReturn(new SchoolResponse());
 
-		mockMvc.perform(post("/v1").content(new Gson().toJson(school)).contentType(MediaType.APPLICATION_JSON))
+		mockMvc.perform(post("/api").content(new Gson().toJson(school)).contentType(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk()).andReturn();
 	}
 
@@ -70,7 +70,7 @@ public class SchoolControllerTest {
 				.thenReturn(new SchoolResponse());
 
 		mockMvc.perform(
-				put("/v1/1111111111111").content(new Gson().toJson(school)).contentType(MediaType.APPLICATION_JSON))
+				put("/api/1111111111111").content(new Gson().toJson(school)).contentType(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk()).andReturn();
 	}
 }

@@ -17,7 +17,7 @@ spring:
 server:
   port: 9011
   servlet:
-    context-path: /schools
+    context-path: /school
 
 logging:
   level:

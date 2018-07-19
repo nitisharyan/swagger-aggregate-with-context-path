@@ -8,9 +8,9 @@ http://localhost:8080/swagger-ui.html
 
 School Manager - Swagger URL:-
 -------------------------------
-http://localhost:9011/schools/swagger-ui.html
+http://localhost:9011/school/swagger-ui.html
 
 
 Organization Manager - Swagger URL:-
 -------------------------------------
-http://localhost:9012/organizations/swagger-ui.html
+http://localhost:9012/organization/swagger-ui.html

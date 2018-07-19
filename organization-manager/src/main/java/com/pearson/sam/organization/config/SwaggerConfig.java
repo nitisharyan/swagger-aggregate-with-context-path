@@ -17,6 +17,6 @@ public class SwaggerConfig {
 	@Bean
 	public Docket productApi() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("com.pearson.sam.organization")).paths(regex("/v1.*")).build();
+				.apis(RequestHandlerSelectors.basePackage("com.pearson.sam.organization")).paths(regex("/api.*")).build();
 	}
 }

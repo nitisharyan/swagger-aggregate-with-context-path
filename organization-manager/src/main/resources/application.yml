@@ -17,7 +17,7 @@ spring:
 server:
   port: 9012
   servlet:
-    context-path: /organizations
+    context-path: /organization
 
 logging:
   level:

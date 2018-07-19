@@ -42,7 +42,7 @@ public class OrganizationControllerTest {
 	
 	@Test
 	public void getHealthStatus() throws Exception {
-		mockMvc.perform(get("/v1").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
+		mockMvc.perform(get("/api").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
 				.andReturn();
 	}
 
@@ -51,7 +51,7 @@ public class OrganizationControllerTest {
 
 		Mockito.when(organizationServiceMock.getOrganization(Mockito.anyString())).thenReturn(new OrganizationResponse());
 
-		mockMvc.perform(get("/v1/1111111111111").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
+		mockMvc.perform(get("/api/1111111111111").contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
 				.andReturn();
 	}
 
@@ -60,7 +60,7 @@ public class OrganizationControllerTest {
 
 		Mockito.when(organizationServiceMock.createOrganization(Mockito.any(Organization.class))).thenReturn(new OrganizationResponse());
 
-		mockMvc.perform(post("/v1").content(new Gson().toJson(organization)).contentType(MediaType.APPLICATION_JSON))
+		mockMvc.perform(post("/api").content(new Gson().toJson(organization)).contentType(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk()).andReturn();
 	}
 
@@ -71,7 +71,7 @@ public class OrganizationControllerTest {
 				.thenReturn(new OrganizationResponse());
 
 		mockMvc.perform(
-				put("/v1/1111111111111").content(new Gson().toJson(organization)).contentType(MediaType.APPLICATION_JSON))
+				put("/api/1111111111111").content(new Gson().toJson(organization)).contentType(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk()).andReturn();
 	}
 }
