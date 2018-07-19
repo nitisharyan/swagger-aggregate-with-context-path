@@ -1,8 +1,8 @@
 swagger:
   resources:
-    - name: Schools
+    - name: School
       url: http://localhost:9011/school/v2/api-docs
       version: 1.0
-    - name: Organizations
+    - name: Organization
       url: http://localhost:9012/organization/v2/api-docs
       version: 1.0
