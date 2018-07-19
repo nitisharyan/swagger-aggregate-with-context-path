@@ -1,4 +1,4 @@
-# spring-boot-common-swagger-for-multiple-microservices
+# swagger-aggregate-with-context-path
 Spring Boot - Common Swagger For Multiple Microservices
 
 Common Swagger URL:-
